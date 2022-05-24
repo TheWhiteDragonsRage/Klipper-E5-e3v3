@@ -30,6 +30,8 @@ log_path = /home/admin/klipper_logs
 
 [history]
 
+[timelapse]
+
 [update_manager]
 channel = dev
 refresh_interval = 168
@@ -43,4 +45,10 @@ path = ~/mainsail
 type = web
 repo = fluidd-core/fluidd
 path = ~/fluidd
+
+[update_manager timelapse]
+type = git_repo
+primary_branch = main
+path = ~/moonraker-timelapse
+origin = https://github.com/mainsail-crew/moonraker-timelapse.git
 
