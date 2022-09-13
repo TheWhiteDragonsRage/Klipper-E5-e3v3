@@ -9,10 +9,6 @@ database_path = /home/admin/.moonraker_database
 
 [authorization]
 trusted_clients = 
-	10.0.0.0/8
-	127.0.0.0/8
-	169.254.0.0/16
-	172.16.0.0/12
 	192.168.0.0/16
 	FE80::/10
 	::1/128
@@ -25,6 +21,7 @@ cors_domains =
 [file_manager]
 config_path = /home/admin/klipper_config
 log_path = /home/admin/klipper_logs
+enable_object_processing = True
 
 [octoprint_compat]
 
@@ -33,7 +30,6 @@ log_path = /home/admin/klipper_logs
 [timelapse]
 
 [update_manager]
-channel = dev
 refresh_interval = 168
 
 [update_manager mainsail]
@@ -51,4 +47,5 @@ type = git_repo
 primary_branch = main
 path = ~/moonraker-timelapse
 origin = https://github.com/mainsail-crew/moonraker-timelapse.git
+managed_services = klipper moonraker
 
